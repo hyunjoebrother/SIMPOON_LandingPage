@@ -28,3 +28,7 @@ p {
   height: 100%;
   margin: 0 auto;
 }
+
+.global-nav-item:first-child:hover {
+  color: #f2ba52;
+}
