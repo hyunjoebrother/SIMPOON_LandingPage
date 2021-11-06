@@ -124,6 +124,8 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 /* SECTION */
 .section {
   background-color: #0061b0;
+  position: absolute;
+  display: flex;
 }
 
 /* FOOTER */
