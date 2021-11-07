@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   overflow-x: hidden;
   line-height: 1.6;
   text-decoration: none;
@@ -17,7 +17,7 @@ p {
   line-height: 1.6;
 }
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -34,6 +34,7 @@ img {
   position: relative;
   overflow-x: hidden; /* 아이폰 가로 스크롤 방지 */
 }
+
 .container {
   /* iPhone 가로 스크롤 방지 */
   overflow-x: hidden;
@@ -42,15 +43,14 @@ img {
 /* HEADER */
 header {
   width: 100%;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: #fff;
   position: fixed;
   top: 0;
   z-index: 9;
 }
 
 header > .inner {
-  height: 100px;
+  height: 80px;
 }
 
 header .main-menu {
@@ -66,7 +66,7 @@ header .main-menu {
 
 header .main-menu .logo {
   position: relative;
-  width: 24%;
+  width: 20%;
 }
 
 header .main-menu .main-menu-list {
@@ -79,53 +79,31 @@ header .main-menu .main-menu-list {
 }
 
 header .main-menu .main-menu-list .menu_name {
-  padding: 20px 20px 34px 20px;
+  padding: auto;
   font-size: 16px;
 }
 
 header .main-menu .main-menu-list:hover .menu_name {
+  border-bottom: 3px solid #0061b0;
   color: #0061b0;
   font-weight: 400;
   width: 120%;
-  border-radius: 6px 6px 0 0;
-}
-
-header .main-menu .main-menu-list .menu_contents {
-  width: 100%;
-  position: fixed;
-  float: left;
-  text-align: center;
-  display: none;
-}
-
-header .main-menu .main-menu-list:hover .menu_contents {
-  top: 50px;
-  display: flex;
-}
-
-header .main-menu .main-menu-list .menu_contents .contents_menu {
-  background-color: #0061b0;
-  position: relative;
-  border-radius: 10px 10px;
-}
-
-header .main-menu .main-menu-list .menu_contents .contents_menu > ul {
-  display: flex; /* 배열 */
-  padding: 10px 3px;
-}
-
-header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
-  width: 143px;
-  font-size: 12px;
-  font-weight: 200;
-  color: #fff;
 }
 
 /* SECTION */
-.section {
+.scroll-section {
+  position: relative;
+  padding-top: 50vh;
+}
+
+/* SECTION 0 */
+#scroll-section-0 {
+  position: relative;
+  top: -10vh;
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/mainBG.jpg");
   background-color: #0061b0;
-  position: absolute;
-  display: flex;
 }
 
 /* FOOTER */
