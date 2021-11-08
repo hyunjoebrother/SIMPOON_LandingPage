@@ -23,8 +23,8 @@ a {
 
 img {
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  /* width: 1920px;
+  height: 1080px; */
 }
 
 /* 가운데 정렬 */
@@ -84,7 +84,7 @@ header .main-menu .main-menu-list .menu_name {
 }
 
 header .main-menu .main-menu-list:hover .menu_name {
-  border-bottom: 3px solid #0061b0;
+  border-bottom: 1.4px solid #0061b0;
   color: #0061b0;
   font-weight: 400;
   width: 120%;
@@ -93,7 +93,7 @@ header .main-menu .main-menu-list:hover .menu_name {
 /* SECTION */
 .scroll-section {
   position: relative;
-  padding-top: 50vh;
+  padding-top: -5vh;
 }
 
 /* SECTION 0 */
@@ -102,8 +102,17 @@ header .main-menu .main-menu-list:hover .menu_name {
   top: -10vh;
   text-align: center;
   color: #fff;
-  background-image: url("../img/mainBG.jpg");
-  background-color: #0061b0;
+}
+
+#scroll-section-0 img {
+  padding-top: 0;
+}
+
+/* SECTION 0-1 */
+#scroll-section-01 {
+  position: relative;
+  text-align: center;
+  letter-spacing: 6px;
 }
 
 /* FOOTER */
