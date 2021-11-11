@@ -115,6 +115,10 @@ header .main-menu .main-menu-list:hover .menu_name {
   letter-spacing: 6px;
 }
 
+/* SECTION 0-2 */
+body {
+}
+
 /* FOOTER */
 .footer {
   background-color: red;
