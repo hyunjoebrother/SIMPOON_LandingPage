@@ -47,40 +47,94 @@
 
     <!-- SECTION -->
     <section class="container">
-      <!-- SECTION 0 : 흰색 배경 -->
+      <!-- SECTION 0 : MAIN -->
       <section class="scroll-section" id="scroll-section-0">
+        <!-- 공모전 포스터 움직이는 영상 배경 -->
         <div class="main-background">
-          <img src="./img/mainBG.jpg" alt="mainBG" />
+          <!-- <img src="./img/mainBG.jpg" alt="mainBG" /> -->
         </div>
 
-      <!--파란 배경 검정색 글자 -->
-        <h1>혼자 찾기 어려운 취업 정보들</h1>
-        <div class="sticky-elem main-message a">
-          <p>같이 찾자</p>
+        <!--파란 배경 검정색 글자 -->
+        <div class="main-text-container">
+          <div class="sticky-elem main-message a">
+            <p>혼자 찾기 어려운 취업 정보들</p>
+          </div>
+          <div class="sticky-elem main-message b">
+            <h1>가치차차 심푼</h1>
+          </div>
         </div>
-        <div class="sticky-elem main-message b">
-          <p>같이 하자</p>
-        </div>
-        <div class="sticky-elem main-message c">
-          <p>같이 가자</p>
-        </div>
-        <div class="sticky-elem main-message d">
-          <p>가치차차 심푼</p>
+        <div class="main-image">
+          <!-- BG 보이는 영역 -->
         </div>
       </section>
 
-      <!-- SECTION 1 -->
+      <!-- SECTION 1 : 서비스 영상 -->
       <section class="scroll-section" id="scroll-section-1">
-        <div class="sticky-elem sticky-elem-canvas">
-          <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
-        </div>
+        <section class="video-left">
+          <div class="sticky-elem main-message a">
+            <p>서비스 영상입니다</p>
+          </div>
+          <div class="sticky-elem main-message b">
+            <h1>호롤로로</h1>
+          </div>
+        </section>
+        <section class="video-right">
+          <!-- Video 보이는 영역 -->
+          <div class="sticky-elem sticky-elem-canvas">
+            <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
+          </div>
+        </section>
+      </section>
+
+      <!-- SECTION2 : 서비스 소개 - 같이 찾자 -->
+      <section class="scroll-section" id="scroll-section-2">
+        <section class="section2-left">
+          <div class="sticky-elem main-message a">
+            <h1>같이 찾자</h1>
+          </div>
+          <div class="sticky-elem main-message b">
+            <p>찾자찾자 관련 서비스 목업</p>
+          </div>
+        </section>
+        <section class="section2-right">
+          <!-- 이미지 영역 -->
+        </section>
+      </section>
+
+      <!-- SECTION3 : 서비스 소개 - 같이 하자 -->
+      <section class="scroll-section" id="scroll-section-3">
+        <section class="section3-left">
+          <div class="sticky-elem main-message a">
+            <h1>같이 하자</h1>
+          </div>
+          <div class="sticky-elem main-message b">
+            <p>하자하자 관련 서비스 목업</p>
+          </div>
+        </section>
+        <section class="section3-right">
+          <!-- 이미지 영역 -->
+        </section>
+      </section>
+
+      <!-- SECTION4 : 서비스 소개 - 같이 가자 -->
+      <section class="scroll-section" id="scroll-section-4">
+        <section class="section4-left">
+          <div class="sticky-elem main-message a">
+            <h1>같이 가자</h1>
+          </div>
+          <div class="sticky-elem main-message b">
+            <p>가자가자 관련 서비스 목업</p>
+          </div>
+        </section>
+        <section class="section4-right">
+          <!-- 이미지 영역 -->
+        </section>
       </section>
     </section>
 
-  
-
-    <!-- FOOTER -->
+    <!-- SECTION5 : FOOTER -->
     <footer class="footer">SIMPOON</footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>

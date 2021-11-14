@@ -96,7 +96,6 @@ header .main-menu .main-menu-list:hover .menu_name {
   padding-top: -5vh;
 }
 
-
 .sticky-elem {
   display: none;
   position: fixed;
@@ -105,8 +104,8 @@ header .main-menu .main-menu-list:hover .menu_name {
 }
 
 .sticky-elem .div {
-background-color: #000;
-opacity: .7;
+  background-color: #000;
+  opacity: 0.7;
 }
 
 .main-message {
@@ -123,7 +122,7 @@ opacity: .7;
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 /* SECTION 0 */
@@ -131,7 +130,13 @@ opacity: .7;
   position: relative;
   top: -3vh;
   text-align: center;
-  color: #000;
+  color: #fff;
+  background-color: #4082f5;
+}
+
+#scroll-section-0 .main-text-container {
+  display: flex;
+  background-color: black;
 }
 
 #scroll-section-0 img {
@@ -141,13 +146,13 @@ opacity: .7;
 #scroll-section-0 h1 {
   position: relative;
   text-align: center;
-  font-size: 3rem;
+  margin-top: 3.5rem;
+  font-size: 5rem;
   letter-spacing: 6px;
   z-index: 5;
 }
 
 #scroll-section-0 .main-message {
-  background-color: #4082F5;
   width: 100%;
 }
 
@@ -166,12 +171,10 @@ opacity: .7;
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1 .sticky-elem
-{
+#show-scene-1 #scroll-section-1 .sticky-elem {
   display: block;
   will-change: transform, opacity;
 }
-
 
 .sticky-elem-canvas {
   top: 0;

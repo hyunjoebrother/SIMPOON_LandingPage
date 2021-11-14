@@ -16,36 +16,26 @@
         container: document.querySelector("#scroll-section-0"),
         messageA: document.querySelector("#scroll-section-0 .main-message.a"),
         messageB: document.querySelector("#scroll-section-0 .main-message.b"),
-        messageC: document.querySelector("#scroll-section-0 .main-message.c"),
-        messageD: document.querySelector("#scroll-section-0 .main-message.d"),
       },
       values: {
         // 타이밍 구간 지정
         // 나타나는 타이밍 조절
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
-        messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
-        messageD_opacity_in: [0, 1, { start: 0.7, end: 0.8 }],
+        messageB_opacity_in: [0, 1, { start: 0.15, end: 0.2 }],
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        messageB_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
-        messageC_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
-        messageD_translateY_in: [20, 0, { start: 0.7, end: 0.8 }],
-        // 시라지는 타이밍 조절
-        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        messageC_opacity_out: [1, 0, { start: 0.65, end: 0.7 }],
-        messageD_opacity_out: [1, 0, { start: 0.85, end: 0.9 }],
-        // 위치 조절 타이밍 조절
-        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
-        messageC_translateY_out: [0, -20, { start: 0.65, end: 0.7 }],
-        messageD_translateY_out: [0, -20, { start: 0.85, end: 0.9 }],
+        messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
+        // // 시라지는 타이밍 조절
+        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+        // // 위치 조절 타이밍 조절
+        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
     {
-    // section 1 - 모니터
-    type: "sticky",
+      // section 1 - 모니터
+      type: "sticky",
       heightNum: 5,
       scrollHeight: 0,
       objs: {
@@ -66,7 +56,6 @@
         messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
       },
     },
-
   ];
 
   function setCanvasImages() {
@@ -247,40 +236,38 @@
         break;
 
       case 1: // 인트로
-      let sequence1 = Math.round(
-        calcValues(values.imageSequence, currentYOffset)
-      );
-      objs.context.drawImage(objs.videoImages[sequence1], 0, 0);
-
-      if (scrollRatio <= 0.22) {
-        // in
-        objs.messageA.style.opacity = calcValues(
-          values.messageA_opacity_in,
-          currentYOffset
+        let sequence1 = Math.round(
+          calcValues(values.imageSequence, currentYOffset)
         );
-        objs.messageA.style.transform = `translate3d(0, ${calcValues(
-          values.messageA_translateY_in,
-          currentYOffset
-        )}%, 0)`;
-      }
+        objs.context.drawImage(objs.videoImages[sequence1], 0, 0);
 
-      if (scrollRatio <= 0.4) {
-        // in
-        objs.canvas.style.opacity = calcValues(
-          values.canvas_opacity_in,
-          currentYOffset
-        );
-      } else {
-        // out
-        objs.canvas.style.opacity = calcValues(
-          values.canvas_opacity_out,
-          currentYOffset
-        );
-      }
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
 
-      break;
+        if (scrollRatio <= 0.4) {
+          // in
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_in,
+            currentYOffset
+          );
+        } else {
+          // out
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_out,
+            currentYOffset
+          );
+        }
 
-
+        break;
     }
   }
 
