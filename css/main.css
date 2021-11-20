@@ -212,8 +212,7 @@ header .main-menu .main-menu-list:hover .menu_name {
 #scroll-section-2 h1,
 #scroll-section-3 h1,
 #scroll-section-4 h1 {
-  position: relative;
-  text-align: left;
+  position: absolute;
   font-size: 5rem;
   letter-spacing: 4px;
   z-index: -1;
@@ -222,15 +221,36 @@ header .main-menu .main-menu-list:hover .menu_name {
 #scroll-section-2 .main-message,
 #scroll-section-3 .main-message,
 #scroll-section-4 .main-message {
+  position: relative;
+  margin-top: 100px;
   width: 100%;
-  z-index: -1;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #4082f5;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  height: 60vh;
   text-align: center;
+}
+
+.footer h2 {
+  letter-spacing: 0.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.footer p {
+  letter-spacing: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer h1 {
+  font-size: 3rem;
+}
+
+.footer h3 {
+  margin-top: 240px;
   letter-spacing: 1rem;
   font-weight: 400;
 }
