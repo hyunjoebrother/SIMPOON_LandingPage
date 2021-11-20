@@ -125,7 +125,7 @@ header .main-menu .main-menu-list:hover .menu_name {
   font-size: 3rem;
 }
 
-/* SECTION 0 */
+/* SECTION 0 : MAIN */
 #scroll-section-0 {
   position: relative;
   top: -3vh;
@@ -134,10 +134,10 @@ header .main-menu .main-menu-list:hover .menu_name {
   background-color: #4082f5;
 }
 
-#scroll-section-0 .main-text-container {
+/* #scroll-section-0 .main-text-container {
   display: flex;
   background-color: black;
-}
+} */
 
 #scroll-section-0 img {
   padding-top: 0;
@@ -156,8 +156,8 @@ header .main-menu .main-menu-list:hover .menu_name {
   width: 100%;
 }
 
-/* SECTION 1 */
-#scroll-section-1 .section1-container {
+/* SECTION 1 : 서비스 영상 */
+#scroll-section-1 {
   background-color: yellow;
   height: 100vh;
   display: flex;
@@ -171,7 +171,10 @@ header .main-menu .main-menu-list:hover .menu_name {
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1 .sticky-elem {
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem,
+#show-scene-4 #scroll-section-4 .sticky-elem {
   display: block;
   will-change: transform, opacity;
 }
@@ -191,7 +194,43 @@ header .main-menu .main-menu-list:hover .menu_name {
   z-index: -1;
 }
 
+#scroll-section-2,
+#scroll-section-3,
+#scroll-section-4 {
+  background-color: #4082f5;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* SECTION 2 : 서비스 소개 - 같이 찾자 */
+/* SECTION 3 : 서비스 소개 - 같이 하자 */
+/* SECTION 4 : 서비스 소개 - 같이 가자 */
+#scroll-section-2 h1,
+#scroll-section-3 h1,
+#scroll-section-4 h1 {
+  position: relative;
+  text-align: left;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  z-index: -1;
+}
+
+#scroll-section-2 .main-message,
+#scroll-section-3 .main-message,
+#scroll-section-4 .main-message {
+  width: 100%;
+  z-index: -1;
+}
+
 /* FOOTER */
 .footer {
-  background-color: red;
+  background-color: #4082f5;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1rem;
+  font-weight: 400;
 }

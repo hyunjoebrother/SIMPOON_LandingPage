@@ -8,7 +8,7 @@
 
   const sceneInfo = [
     {
-      // section 0 - 흰색배경
+      // SECTION 0 - MAIN
       type: "sticky",
       heightNum: 5, // 브라우저 높이의 5배로 세팅
       scrollHeight: 0,
@@ -34,7 +34,7 @@
       },
     },
     {
-      // section 1 - 모니터
+      // SECTION 1 - 서비스 영상
       type: "sticky",
       heightNum: 5,
       scrollHeight: 0,
@@ -54,6 +54,84 @@
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
         messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+      },
+    },
+    {
+      // SECTION 2 - 서비스 소개 - 같이 찾자
+      type: "sticky",
+      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      scrollHeight: 0,
+      objs: {
+        container: document.querySelector("#scroll-section-2"),
+        messageA: document.querySelector("#scroll-section-2 .main-message.a"),
+        messageB: document.querySelector("#scroll-section-2 .main-message.b"),
+      },
+      values: {
+        // 타이밍 구간 지정
+        // 나타나는 타이밍 조절
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageB_opacity_in: [0, 1, { start: 0.15, end: 0.2 }],
+        // 위치 변화 타이밍 조절
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
+        // // 시라지는 타이밍 조절
+        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+        // // 위치 조절 타이밍 조절
+        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
+      },
+    },
+    {
+      // SECTION 3 - 서비스 소개 - 같이 하자
+      type: "sticky",
+      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      scrollHeight: 0,
+      objs: {
+        container: document.querySelector("#scroll-section-3"),
+        messageA: document.querySelector("#scroll-section-3 .main-message.a"),
+        messageB: document.querySelector("#scroll-section-3 .main-message.b"),
+      },
+      values: {
+        // 타이밍 구간 지정
+        // 나타나는 타이밍 조절
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageB_opacity_in: [0, 1, { start: 0.15, end: 0.2 }],
+        // 위치 변화 타이밍 조절
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
+        // // 시라지는 타이밍 조절
+        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+        // // 위치 조절 타이밍 조절
+        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
+      },
+    },
+    {
+      // SECTION 4 - 서비스 소개 - 같이 가자
+      type: "sticky",
+      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      scrollHeight: 0,
+      objs: {
+        container: document.querySelector("#scroll-section-4"),
+        messageA: document.querySelector("#scroll-section-4 .main-message.a"),
+        messageB: document.querySelector("#scroll-section-4 .main-message.b"),
+      },
+      values: {
+        // 타이밍 구간 지정
+        // 나타나는 타이밍 조절
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageB_opacity_in: [0, 1, { start: 0.15, end: 0.2 }],
+        // 위치 변화 타이밍 조절
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
+        // // 시라지는 타이밍 조절
+        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+        // // 위치 조절 타이밍 조절
+        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
   ];
@@ -142,7 +220,8 @@
     //console.log(currentScene, currentYOffset);
 
     switch (currentScene) {
-      case 0: // 메인
+      // SECTION 0 : MAIN
+      case 0:
         // console.log('0 play');
 
         if (scrollRatio <= 0.22) {
@@ -235,7 +314,8 @@
 
         break;
 
-      case 1: // 인트로
+      // SECTION 1 : 서비스 영상
+      case 1:
         let sequence1 = Math.round(
           calcValues(values.imageSequence, currentYOffset)
         );
@@ -265,6 +345,288 @@
             values.canvas_opacity_out,
             currentYOffset
           );
+        }
+
+        break;
+
+      // SECTION 2 : 서비스 소개 - 같이 찾자
+      case 2:
+        // console.log('0 play');
+
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.42) {
+          // in
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_in,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_out,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.62) {
+          // in
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.82) {
+          // in
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_in,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_out,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        break;
+
+      // SECTION 3 : 서비스 소개 - 같이 하자
+      case 3:
+        // console.log('0 play');
+
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.42) {
+          // in
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_in,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_out,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.62) {
+          // in
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.82) {
+          // in
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_in,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_out,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        break;
+
+      // SECTION 4 : 서비스 소개 - 같이 가자
+      case 4:
+        // console.log('0 play');
+
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.42) {
+          // in
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_in,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_out,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.62) {
+          // in
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.82) {
+          // in
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_in,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_out,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_out,
+            currentYOffset
+          )}%, 0)`;
         }
 
         break;
