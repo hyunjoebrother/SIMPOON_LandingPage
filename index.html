@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header id="headerbar">
       <div class="inner">
         <ul class="main-menu">
           <div class="logo"><img src="./img/logo.svg" alt="logo" /></div>
@@ -46,7 +46,11 @@
     </header>
 
     <!-- SECTION -->
-    <section class="container">
+    <section
+      class="container"
+      onload="chkSize(event)"
+      onscroll="headerbarToggle()"
+    >
       <!-- SECTION 0 : MAIN -->
       <section class="scroll-section" id="scroll-section-0">
         <!-- 공모전 포스터 움직이는 영상 배경 -->

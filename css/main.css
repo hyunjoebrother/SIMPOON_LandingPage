@@ -47,6 +47,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
+  /* 스크롤 처리 */
+  transition: opacity 1s;
 }
 
 header > .inner {

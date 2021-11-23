@@ -1,4 +1,18 @@
 (() => {
+  // HEADER 스크롤 event
+  var prevScrollpos = window.pageYOffset;
+  console.log("first Y offset : " + prevScrollpos); // first value : 0
+  window.onscroll = headerbarToggle;
+  function headerbarToggle() {
+    var headerbar = document.getElementById("headerbar");
+    var currentScrollPos = window.pageYOffset; //. current Y offset
+    if (prevScrollpos < currentScrollPos) {
+      headerbar.style.opacity = 0;
+    } else {
+      headerbar.style.opacity = 1;
+    }
+  }
+
   // 변수 모음
 
   let yOffset = 0; // window.pageYOffset 대신 쓸 변수
