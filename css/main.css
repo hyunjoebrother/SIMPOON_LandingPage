@@ -86,9 +86,9 @@ header .main-menu .main-menu-list .menu_name {
 }
 
 header .main-menu .main-menu-list:hover .menu_name {
-  border-bottom: 1.4px solid #0061b0;
+  /* border-bottom: 1.4px solid #0061b0; */
   color: #0061b0;
-  font-weight: 400;
+  font-weight: 500;
   width: 120%;
 }
 
@@ -216,6 +216,7 @@ header .main-menu .main-menu-list:hover .menu_name {
 #scroll-section-4 h1 {
   position: absolute;
   font-size: 5rem;
+  margin-left: -120px;
   letter-spacing: 4px;
   z-index: -1;
 }
