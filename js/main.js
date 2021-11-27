@@ -39,12 +39,6 @@
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
-        // // 시라지는 타이밍 조절
-        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        // // 위치 조절 타이밍 조절
-        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
     {
@@ -55,19 +49,22 @@
       objs: {
         container: document.querySelector("#scroll-section-1"),
         messageA: document.querySelector("#scroll-section-1 .main-message.a"),
-        canvas: document.querySelector("#video-canvas-1"),
-        context: document.querySelector("#video-canvas-1").getContext("2d"),
-        videoImages: [],
+        // canvas: document.querySelector("#video-canvas-1"),
+        // context: document.querySelector("#video-canvas-1").getContext("2d"),
+        // videoImages: [],
       },
       values: {
-        videoImageCount: 14,
-        imageSequence: [0, 13],
-        canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
-        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        // videoImageCount: 14,
+        // imageSequence: [0, 13],
+        // canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
+        // canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        // 타이밍 구간 지정
+        // 나타나는 타이밍 조절
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageB_opacity_in: [0, 1, { start: 0.15, end: 0.2 }],
+        // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
       },
     },
     {
@@ -88,12 +85,6 @@
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
-        // // 시라지는 타이밍 조절
-        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        // // 위치 조절 타이밍 조절
-        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
     {
@@ -114,12 +105,6 @@
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
-        // // 시라지는 타이밍 조절
-        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        // // 위치 조절 타이밍 조절
-        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
     {
@@ -140,12 +125,6 @@
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.15, end: 0.2 }],
-        // // 시라지는 타이밍 조절
-        // messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        // messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        // // 위치 조절 타이밍 조절
-        // messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        // messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
       },
     },
   ];
