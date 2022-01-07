@@ -44,20 +44,13 @@
     {
       // SECTION 1 - 서비스 영상
       type: "sticky",
-      heightNum: 5,
+      heightNum: 1,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-1"),
         messageA: document.querySelector("#scroll-section-1 .main-message.a"),
-        // canvas: document.querySelector("#video-canvas-1"),
-        // context: document.querySelector("#video-canvas-1").getContext("2d"),
-        // videoImages: [],
       },
       values: {
-        // videoImageCount: 14,
-        // imageSequence: [0, 13],
-        // canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
-        // canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         // 타이밍 구간 지정
         // 나타나는 타이밍 조절
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
@@ -70,7 +63,7 @@
     {
       // SECTION 2 - 서비스 소개 - 같이 찾자
       type: "sticky",
-      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      heightNum: 1, // 브라우저 높이의 5배로 세팅
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-2"),
@@ -90,7 +83,7 @@
     {
       // SECTION 3 - 서비스 소개 - 같이 하자
       type: "sticky",
-      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      heightNum: 1, // 브라우저 높이의 5배로 세팅
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-3"),
@@ -110,7 +103,7 @@
     {
       // SECTION 4 - 서비스 소개 - 같이 가자
       type: "sticky",
-      heightNum: 5, // 브라우저 높이의 5배로 세팅
+      heightNum: 1, // 브라우저 높이의 5배로 세팅
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-4"),
